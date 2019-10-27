@@ -1,0 +1,15 @@
+
+async function loadNude() {
+   
+var nude  = document.createElement('script');
+nude.src =  await chrome.extension.getURL("./nude.js");
+//document.getElementsByTagName('head')[0].appendChild(nude);
+await document.head.appendChild(nude);
+
+var scan = document.createElement('script');
+scan.src = await chrome.extension.getURL("./scan.js");
+await document.head.appendChild(scan);
+
+}
+
+loadNude();

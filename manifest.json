@@ -1,0 +1,20 @@
+{
+ "manifest_version" : 2, 
+"name" : "NudeDetection", 
+"version" : "0.1",
+"description" :"Remove fotos com nudes de qualquer pagina web", 
+"icons" : { "128" : "./src/icon.png"}, 
+"permissions" : ["activeTab"],
+"web_accessible_resources" : [
+"*.jpg","*.js"
+],
+  "content_scripts":[
+    {
+      "matches" : [
+        "<all_urls>"
+        
+        ],
+        "js" : ["./scan.js","./content.js","./nude.js"]
+    }
+    ]
+}
